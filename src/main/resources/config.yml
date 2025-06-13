@@ -1,0 +1,122 @@
+# Configuration StaffPlus v2.0
+
+# Paramètres généraux
+general:
+  prefix: "&7[&bStaffPlus&7] "
+  vanish-on-staff-join: true
+  staff-mode-fly: true
+  
+# Items du mode staff
+staff-mode-items:
+  examiner:
+    name: "&b🔍 Examineur"
+    material: COMPASS
+    slot: 0
+    action: EXAMINE
+    lore:
+      - "&7Clic droit sur un joueur"
+      - "&7pour l'examiner"
+  inventory:
+    name: "&e📦 Inventaire"
+    material: CHEST
+    slot: 1
+    action: OPEN_INVENTORY
+    lore:
+      - "&7Voir l'inventaire"
+      - "&7d'un joueur"
+  freeze:
+    name: "&c🧊 Freeze"
+    material: PACKED_ICE
+    slot: 2
+    action: FREEZE
+    lore:
+      - "&7Geler un joueur"
+      - "&7suspect"
+  randomtp:
+    name: "&a🔁 Téléportation"
+    material: ENDER_PEARL
+    slot: 3
+    action: RANDOM_TP
+    lore:
+      - "&7Téléporte à un"
+      - "&7joueur aléatoire"
+  vanish:
+    name: "&d👁 Vanish"
+    material: GLASS
+    slot: 4
+    action: VANISH_TOGGLE
+    lore:
+      - "&7Active/désactive"
+      - "&7le vanish"
+  moderation:
+    name: "&4🔐 Modération"
+    material: BARRIER
+    slot: 8
+    action: MODERATION_MENU
+    lore:
+      - "&7Outils de"
+      - "&7modération"
+
+# Système de signalements
+reports:
+  cooldown-seconds: 60
+  notify-staff-on-report: true
+  max-reports-per-page: 10
+  auto-delete-days: 30
+  sound-notification: true
+  notification-sound: BLOCK_NOTE_BLOCK_PLING
+
+# Système de freeze
+freeze:
+  prevent-movement: true
+  prevent-chat: true
+  prevent-commands: true
+  prevent-quit: true
+  kick-on-quit-attempt: true
+  quit-kick-message: "&cVous ne pouvez pas quitter pendant un freeze !"
+  freeze-message: "&c🧊 Vous avez été gelé par un modérateur !"
+  unfreeze-message: "&a✅ Vous n'êtes plus gelé !"
+
+# Tchat staff
+staff-chat:
+  format: "&7[&bSTAFF&7] &f{player}: &e{message}"
+  log-to-console: true
+  
+# Système d'examen
+examine:
+  show-ping: true
+  show-gamemode: true
+  show-location: true
+  show-recent-messages: true
+  show-recent-commands: true
+  max-recent-entries: 10
+
+# Intégrations
+integrations:
+  discord:
+    enabled: false
+    webhook-url: ""
+    send-reports: true
+    send-freeze-logs: true
+  placeholderapi:
+    enabled: true
+  luckperms:
+    enabled: true
+
+# Messages
+messages:
+  no-permission: "&cVous n'avez pas la permission !"
+  player-only: "&cCette commande est réservée aux joueurs !"
+  player-not-found: "&cJoueur introuvable !"
+  staff-mode-enabled: "&aMode staff activé !"
+  staff-mode-disabled: "&cMode staff désactivé !"
+  vanish-enabled: "&aVanish activé !"
+  vanish-disabled: "&cVanish désactivé !"
+  freeze-success: "&aJoueur {player} gelé !"
+  freeze-already: "&cCe joueur est déjà gelé !"
+  unfreeze-success: "&aJoueur {player} dégelé !"
+  report-success: "&aSignalement envoyé !"
+  report-cooldown: "&cVeuillez attendre avant de signaler à nouveau !"
+  no-reports: "&cAucun signalement trouvé !"
+  teleport-success: "&aTéléporté vers {player} !"
+  no-players-online: "&cAucun joueur en ligne !"

@@ -1,0 +1,28 @@
+
+name: StaffPlus
+version: 1.0
+main: me.kairo.staffplus.StaffPlus
+author: Kairo
+api-version: 1.13
+commands:
+  freeze:
+    description: Gèle un joueur
+    usage: /freeze <joueur>
+  staff:
+    description: Active le mode staff
+    usage: /staff
+  report:
+    description: Signaler un joueur
+    usage: /report <joueur> <raison>
+  reports:
+    description: Voir tous les reports
+    usage: /reports
+  examine:
+    description: Examiner un joueur
+    usage: /examine <joueur>
+  randomtp:
+    description: Se téléporter à un joueur aléatoire
+    usage: /randomtp
+  staffchat:
+    description: Activer le chat staff
+    usage: /staffchat
